@@ -1,3 +1,5 @@
+Assignment for CS 5700
+
 Regular expressions are used for describing languages (or a list of valid strings for a language). In this assignment you are going to build state machines that can detect strings of the following string shapes:
 
     An integer
