@@ -1,11 +1,12 @@
 package org.example.states
 import org.example.State
 
-
-class Integer19State : State {
+class FloatLeadingValState : State {
     override fun handle(char: Char): State?{
-        if (char in '1'..'9') {
+        if (char in '0'..'9') {
             return this
+        } else if (char == '.') {
+            return FloatFollowingValState()
         }
         return null
     }
@@ -13,5 +14,4 @@ class Integer19State : State {
     override fun isValid(): Boolean {
         return false
     }
-
 }

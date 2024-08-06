@@ -1,17 +1,17 @@
 package org.example.states
 import org.example.State
 
-
-class Integer19State : State {
+class FloatFollowingValState : State {
+    private var valid : Boolean = true
     override fun handle(char: Char): State?{
-        if (char in '1'..'9') {
+        if (char in '0'..'9') {
             return this
         }
+        valid = false
         return null
     }
 
     override fun isValid(): Boolean {
-        return false
+        return valid
     }
-
 }
