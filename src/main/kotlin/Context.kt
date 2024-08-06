@@ -1,6 +1,7 @@
 package org.example
 
 interface Context {
+    val initialState: State
     var currentState: State
 
     fun validate(input: String): Boolean {
@@ -14,6 +15,8 @@ interface Context {
         return currentState.isValid()
     }
 
-
+    fun reset() {
+        currentState = initialState
+    }
 
 }
