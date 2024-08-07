@@ -11,7 +11,9 @@ interface Context {
                 return false
             }
         }
-        return currentState.isValid()
+        val valid = currentState.isValid()
+        reset() //To reset Check init state for next validation
+        return valid
     }
 
     fun setState(newState: State){

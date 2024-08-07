@@ -13,8 +13,4 @@ class Integer09State(private val checkInteger: CheckInteger) : State {
             valid = false
         }
     }
-
-    override fun isValid(): Boolean {
-        return valid
-    }
 }

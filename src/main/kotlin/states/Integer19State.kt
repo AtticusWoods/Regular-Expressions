@@ -15,9 +15,4 @@ class Integer19State(private val checkInteger: CheckInteger): State {
         }
 
     }
-
-    override fun isValid(): Boolean {
-        return valid
-    }
-
 }

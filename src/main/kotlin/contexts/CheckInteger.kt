@@ -13,5 +13,4 @@ class CheckInteger : Context {
 
     override val initialState: State = integer19State
     override var currentState = initialState
-
 }
