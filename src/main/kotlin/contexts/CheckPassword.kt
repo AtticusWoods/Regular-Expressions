@@ -18,8 +18,8 @@ class CheckPassword  : Context {
 
     override val initialState: State = passwordNormalState
     override var currentState = initialState
-    override var valid: Boolean = (currentState == passwordSpecialState && characters >= 8 && capitals >= 1 && specials >= 1)
-    // Checks all requirements before returning valid
+    override var valid: Boolean = false
+
 
     override fun validate(input: String): Boolean {
         valid = false
@@ -42,6 +42,7 @@ class CheckPassword  : Context {
     }
 
     private fun checkValidity() {
+        // Checks all requirements before returning valid
         if(currentState == passwordSpecialState) {
             valid = false
         } else if (characters >= 8 && capitals >= 1 && specials >= 1) {
