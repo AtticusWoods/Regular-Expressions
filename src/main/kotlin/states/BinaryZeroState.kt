@@ -10,7 +10,7 @@ class BinaryZeroState(private val checkBinary: CheckBinary) : State {
             checkBinary.setState(checkBinary.binaryOneState)
             checkBinary.valid =  true
         } else if (char == '0') {
-            checkBinary.setState(this)
+            //checkBinary.setState(this)
             checkBinary.valid =  false
         } else {
             checkBinary.setState(checkBinary.failState)

@@ -6,7 +6,7 @@ class FloatLeadingValState(private val checkFloat: CheckFloat) : State {
 
     override fun handle(char: Char){
         if (char in '1'..'9') {
-            checkFloat.setState(checkFloat.floatLeadingValState)
+            //checkFloat.setState(this)
         } else if (char == '.') {
             checkFloat.setState(checkFloat.floatFollowingValState)
         }

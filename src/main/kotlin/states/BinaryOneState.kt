@@ -7,7 +7,7 @@ class BinaryOneState(private val checkBinary: CheckBinary) : State {
 
     override fun handle(char: Char) {
         if (char == '1') {
-            checkBinary.setState(this)
+            //checkBinary.setState(this)
             checkBinary.valid =  true
         } else if (char == '0') {
             checkBinary.setState(checkBinary.binaryZeroState)
