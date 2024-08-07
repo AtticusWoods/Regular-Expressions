@@ -1,14 +1,14 @@
 package org.example.states
 import org.example.State
+import org.example.contexts.CheckFloat
 
-class FloatFollowingValState : State {
-    private var valid : Boolean = true
-    override fun handle(char: Char): State?{
+class FloatFollowingValState(private val checkFloat: CheckFloat) : State {
+    override var valid : Boolean = true
+    override fun handle(char: Char){
         if (char in '0'..'9') {
-            return this
+            checkFloat.setState(checkFloat.floatFollowingValState)
         }
         valid = false
-        return null
     }
 
     override fun isValid(): Boolean {

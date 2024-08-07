@@ -1,6 +1,7 @@
 package org.example
 
 interface State {
-    fun handle(char: Char): State?
+    var valid : Boolean
+    fun handle(char: Char)
     fun isValid(): Boolean
 }

@@ -10,9 +10,12 @@ interface Context {
             if (nextState == null) {
                 return false
             }
-            currentState = nextState
         }
         return currentState.isValid()
+    }
+
+    fun setState(newState: State){
+        currentState = newState
     }
 
     fun reset() {
