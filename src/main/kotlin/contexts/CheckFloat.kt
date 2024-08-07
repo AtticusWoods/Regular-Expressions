@@ -15,4 +15,5 @@ class CheckFloat : Context {
 
     override val initialState: State = floatStartValState
     override var currentState = initialState
+    override var valid: Boolean = false
 }

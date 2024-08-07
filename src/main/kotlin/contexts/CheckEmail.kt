@@ -4,6 +4,7 @@ import org.example.Context
 import org.example.State
 
 class CheckEmail : Context {
+    override var valid: Boolean = false
     override var initialState: State
         get() = TODO("Not yet implemented")
         set(value) {}

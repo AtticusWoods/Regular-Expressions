@@ -3,16 +3,17 @@ package org.example
 interface Context {
     val initialState: State
     var currentState: State
+    var valid: Boolean
 
     fun validate(input: String): Boolean {
+        valid = false
         for (char in input) {
             val nextState = currentState.handle(char)
             if (nextState == null) {
                 return false
             }
         }
-        val valid = currentState.isValid()
-        reset() //To reset Check init state for next validation
+        reset() //To reset init state for next validation
         return valid
     }
 
